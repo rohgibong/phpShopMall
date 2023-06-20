@@ -1,0 +1,144 @@
+#categoryDiv{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 50px;
+}
+#categoryNameDiv{
+  width: 1200px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding-top: 4px;
+  text-align: center;
+}
+.categoryName{
+  margin-left: 50px;
+  margin-right: 50px;
+  transition: all 0.4s;
+}
+.categoryName:hover{
+  color: crimson;
+}
+#slideDiv{
+  margin: auto;
+  margin-top: 50px;
+  height: 500px;
+  width: 1000px;
+  border: 1px solid lightgray;
+  box-shadow: 5px 5px 5px lightgray;
+}
+.section{
+  height: 500px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.slider{
+  width: 1000px;
+  height: 500px;
+  overflow: hidden;
+}
+.slide{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+.slide input{
+  display: none;
+}
+.st{
+  width: 20%;
+  transition: 2s;
+}
+.st img{
+  width: 1000px;
+  height: 500px;
+}
+.nav-m{
+  position: absolute;
+  width: 1000px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.m-btn{
+  margin-top: 500px;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.m-btn:not(:last-child){
+  margin-right: 30px;
+}
+.m-btn:hover{
+  background-color: black;
+}
+#radio1:checked ~.first{
+  margin-left: 0;
+}
+#radio2:checked ~.first{
+  margin-left: -20%;
+}
+#radio3:checked ~.first{
+  margin-left: -40%;
+}
+#radio4:checked ~.first{
+  margin-left: -60%;
+}
+.nav-auto{
+  position: absolute;
+  width: 1000px;
+  margin-top: 460px;
+  display: flex;
+  justify-content: center;
+}
+.nav-auto div{
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.nav-auto div:not(:last-child){
+  margin-right: 30px;
+  justify-content: center;
+}
+#radio1:checked ~ .nav-auto .a-b1{
+  background-color: black;
+}
+#radio2:checked ~ .nav-auto .a-b2{
+  background-color: black;
+}
+#radio3:checked ~ .nav-auto .a-b3{
+  background-color: black;
+}
+#radio4:checked ~ .nav-auto .a-b4{
+  background-color: black;
+}
+#leftArrowDiv{
+  width: 180px;
+  height: 450px;
+  float: left;
+  margin-left: 70px;
+  margin-top: -500px;
+  cursor: pointer;
+}
+#rightArrowDiv{
+  width: 180px;
+  height: 450px;
+  float: right;
+  margin-right: 70px;
+  margin-top: -500px;
+  cursor: pointer;
+}
+#leftArrow, #rightArrow{
+  width: 70px;
+  margin-top: 190px;
+}
+#leftArrow{
+  margin-left: 50px;
+}
+#rightArrow{
+  margin-left: 50px;
+}
