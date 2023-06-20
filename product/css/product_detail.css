@@ -1,0 +1,310 @@
+#contentDiv{
+  width: 1040px;
+  height: 600px;
+  margin: auto;
+  padding-top: 50px;
+}
+#imgDiv{
+  width: 500px;
+  height: 500px;
+  float: left;
+  margin-left: 40px;
+}
+#soldOutImgId{
+  margin-left: 21px;
+  margin-top: -10px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+#orderDiv{
+  width: 495px;
+  height: 500px;
+  float: right;
+}
+#orderContentDiv{
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+}
+#artistNameId{
+  display: block;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+#productNameDiv{
+  height: 80px;
+}
+#detailNameId{
+  display: block;
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#productPriceId{
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+}
+#pointId{
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+}
+#delDateId{
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  color: red;
+  font-weight: bold;
+  font-size: 13px;
+}
+#delPriceId{
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+#amountDiv{
+  border: 1px solid gray;
+  height: 110px;
+  width: 350px;
+  margin: auto;
+}
+#productNameId{
+  display: block;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: gray;
+  font-weight: bold;
+}
+#lastStock{
+  display: absolute;
+  margin-left: -80px;
+  font-size: 11px;
+  font-weight: bold;
+  color: red;
+}
+#momdifyAmount{
+  width: 80px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 25px;
+  float: left;
+}
+.amountBtn{
+  border-radius: 10px;
+  border: 1px solid gray;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.amountBtn:hover{
+  background-color: rgb(234, 234, 234);;
+}
+#amountInput{
+  width: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+#totalPriceDiv{
+  width: 110px;
+  height: 30px;
+  margin-top: 28px;
+  color: dimgray;
+  font-weight: bold;
+  font-size: 15px;
+  float: right;
+  text-align: right;
+  padding-right: 20px;
+}
+#totalPrice, #allTotal{
+  width: 60px;
+  color: dimgray;
+  border: none;
+  cursor: text;
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: right;
+}
+#totalMent{
+  display: block;
+  float: left;
+  margin-left: 25px;
+  margin-top: 20px;
+  font-size: 23px;
+  font-weight: bold;
+}
+#allTotalDiv{
+  float: right;
+  margin-right: 25px;
+  margin-top: 20px;
+  font-size: 23px;
+  color: black;
+}
+#allTotal{
+  width: 90px;
+  font-size: 23px;
+  color: black;
+}
+#btnDiv{
+  width: 350px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 25px;
+  height: 150px;
+}
+#buyBtn, #addCartBtn{
+  height: 50px;
+  width: 350px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 10px;
+  border: 2px solid black;
+  transition: all 0.4s;
+}
+input[id*="popup"], input[id*="addCartLabel"]{
+  display: none;
+}
+input[id*="popup"] + label, input[id*="addCartLabel"] + label{
+  display: inline-block;
+}
+input[id*="popup"] + label + div, input[id*="addCartLabel"] + label + div{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+input[id*="popup"]:checked + label + div, input[id*="addCartLabel"]:checked + label + div{
+  display: block;
+}
+input[id*="popup"] + label + div > div, input[id*="addCartLabel"] + label + div > div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  background: #fff;
+  z-index: 2;
+}
+input[id*="popup"] + label + div > div > #closeLabel, input[id*="addCartLabel"] + label + div > div > #closeLabel{
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  font-size: 30px;
+  transform: translate(30%, -30%);
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+input[id*="popup"] + label + div > div > #continueLabel, input[id*="addCartLabel"] + label + div > div > #continueLabel{
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  font-size: 15px;
+  font-weight: bold;
+  transform: translate(30%, -30%);
+  cursor: pointer;
+  z-index: 1;
+}
+input[id*="popup"] + label + div > div > #continueLabel > div, input[id*="addCartLabel"] + label + div > div > #continueLabel > div{
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+#goWishBtn{
+  position: absolute;
+  border: 2px solid black;
+  width: 110px;
+  color: white;
+  background-color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 258px;
+  cursor: pointer;
+}
+input[id*="popup"] + label + div > label, input[id*="addCartLabel"] + label + div > label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#wishImgFloat{
+  margin-top: 60px;
+}
+#wishMentFloatDiv{
+  margin: auto;
+  margin-top: 30px;
+  width: 350px;
+  height: 60px;
+}
+#wishMentFloatDiv > span{
+  font-weight: bold;
+}
+#wishBtn{
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-left: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  float: left;
+  height: 47px;
+  width: 47px;
+  font-size: 36px;
+  background-color: white;
+}
+#addCartBtn{
+  width: 270px;
+  line-height: 47px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 5px;
+  color: black;
+  background-color: white;
+  float: right;
+}
+#buyBtn:hover{
+  border: none;
+  background-color: rgb(99, 99, 99);
+  color: whitesmoke;
+}
+#addCartBtn:hover{
+  border: 2px solid rgb(225, 225, 225);
+  background-color: rgb(225, 225, 225);
+  color: rgb(84, 84, 84);
+}
+#detailImgDiv{
+  width: 1000px;
+  float: left;
+  margin-top: 100px;
+}
+#detailImgId{
+  margin-left: 100px;
+}

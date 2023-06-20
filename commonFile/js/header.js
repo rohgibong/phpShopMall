@@ -3,18 +3,18 @@ function search(){
   if(searchValue == ""){
     alert("검색어를 입력해주세요.");
   } else {
-    location.href="./product/list.php?searchValue="+searchValue;
+    location.href="../../product/php/product_list.php?searchValue="+searchValue;
   }
 }
 
 function moveUserPage(){
   if(memberNo > 0){
-    location.href='./member/member_myPage.php';
+    location.href='../../member/php/member_myPage.php';   //경로수정
   } else {
-    location.href='./login/login.php';
+    location.href='./login/login.php';    //경로수정
   }
 }
 
 function moveCartPage(){
-  location.href='./cartPage/list.php';
+  location.href='./cartPage/list.php';    //경로수정
 }

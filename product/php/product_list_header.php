@@ -10,9 +10,8 @@
   const searchValue = <?php echo $searchValue ?>;
   if((cateCode <= 0 || cateCode > 4) && searchValue == 0){
     alert('잘못된 접근입니다.');
-    location.href='../index.php';
+    location.href='../../home/php/index.php';
   }
-  const memberNo = <?php echo $memberNo ?>;
 </script>
 <?php
   $pageSet = 6;
@@ -55,7 +54,7 @@
   }
   
   if($pageNumber < 1 || $pageNumber > $pageCount){
-    echo '<script>alert("잘못된 접근입니다.");location.href="../index.php";</script>';
+    echo '<script>alert("잘못된 접근입니다.");location.href="../../home/php/index.php";</script>';
   }
   mysqli_close($con);
 ?>

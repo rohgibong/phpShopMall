@@ -11,26 +11,26 @@
 <div id="topDiv">
   <div id="topDivMent">
     <?php if($memberNo == 1 ): ?>
-      <a href="./manage/productList.php" id="productListBtn">상품관리</a>
+      <a href="../../manage/php/manage_productList.php" id="productListBtn">상품관리</a>
       <span id="adminMent">[관리자]</span><span id="myName"><?=$name ?>(<?=$id?>)님</span>
-      <a href="./login/logoutProc.php" id="logoutBtn">LOGOUT</a>
+      <a href="../../login/php/process/logoutProc.php" id="logoutBtn">LOGOUT</a>
     <?php elseif($memberNo > 1): ?>
       <span id="myName"><?=$name ?>(<?=$id?>)님</span>
-      <a href="./login/logoutProc.php" id="logoutBtn" class="btnClass">LOGOUT</a>
+      <a href="../../login/php/process/logoutProc.php" id="logoutBtn" class="btnClass">LOGOUT</a>
     <?php else: ?>
-      <a href="./login/login.php" id="loginBtn" class="btnClass">LOGIN</a> 
-      <a href="./join/join.php" id="joinBtn" class="btnClass">JOIN</a>
+      <a href="../../login/php/login_loginPage.php" id="loginBtn" class="btnClass">LOGIN</a> 
+      <a href="../../join/php/join_joinPage.php" id="joinBtn" class="btnClass">JOIN</a>
     <?php endif; ?>
   </div>
 </div>
 
 <div id="titleDiv">
   <div id="mainTitleDiv">
-    <img src="./img/MyGoodsStoreLogoBlack.png" alt="logoImg" width="180px" id="logoImg" onClick="location.href='index.php'">
+    <img src="../../img/MyGoodsStoreLogoBlack.png" alt="logoImg" width="180px" id="logoImg" onClick="location.href='../../home/php/index.php'">
   </div>
   <div id="usercartDiv">
-    <img src="./img/user.png" alt="userImg" width="35px" id="userImg" onClick="moveUserPage();">
-    <img src="./img/basket.png" alt="basketImg" width="50px" id="basketImg" onClick="moveCartPage();">
+    <img src="../../img/user.png" alt="userImg" width="35px" id="userImg" onClick="moveUserPage();">
+    <img src="../../img/basket.png" alt="basketImg" width="50px" id="basketImg" onClick="moveCartPage();">
   </div>
   <div id="searchDiv">
     <input type="text" name="searchInput" id="searchInput" onkeydown="if(event.keyCode==13) search()">  

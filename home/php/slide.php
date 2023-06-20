@@ -7,16 +7,16 @@
         <input type="radio" name="radio-btn" id="radio3">
         <input type="radio" name="radio-btn" id="radio4">
         <div class="st first">
-          <img src="./img/image1.jpg" alt="">
+          <img src="../../img/image1.jpg" alt="">
         </div>
         <div class="st">
-          <img src="./img/image2.jpg" alt="">
+          <img src="../../img/image2.jpg" alt="">
         </div>
         <div class="st">
-          <img src="./img/image3.jpg" alt="">
+          <img src="../../img/image3.jpg" alt="">
         </div>
         <div class="st">
-          <img src="./img/image4.jpg" alt="">
+          <img src="../../img/image4.jpg" alt="">
         </div>
         <div class="nav-auto">
           <div class="a-b1"></div>
