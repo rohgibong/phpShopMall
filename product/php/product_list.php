@@ -12,7 +12,7 @@
   
 <div id="mainDiv">
   <?php include "../../commonFile/php/header.php";?>
-  <?php include "./product_list_header.php";?>
+  <?php include "./header/product_list_header.php";?>
   
   <div id="contentDiv">
     <div id="sideDiv">

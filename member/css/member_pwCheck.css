@@ -1,0 +1,114 @@
+#mainDiv{
+  width: 1300px;
+  height: 600px;
+  margin: auto;
+}
+#titleDiv{
+  border: 1px solid white;
+  height: 100px;
+}
+#mainTitleDiv{
+  position: absolute;
+  margin-left: 560px;
+  height: 100px;
+}
+#mainTitleDiv:hover{
+  cursor: pointer;
+}
+#contentDiv{
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 350px;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 30px;
+  text-align: center;
+}
+#subTitleDiv{
+  height: 20px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 13px;
+}
+#subTitleSpan{
+  font-weight: bold;
+  font-size: 14px;
+}
+#mentDiv{
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-left: 170px;
+  margin-top: 50px;
+}
+#idTitle, #pwdTitle{
+  font-weight: bold;
+  font-size: 18px;
+}
+#inputDiv{
+  width: 330px;
+  height: 100px;
+  float: right;
+  margin-right: 150px;
+  margin-top: 35px;
+}
+#id, #pwd {
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 12px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+#id {
+  margin-top: 7px;
+  border: none;
+  color: gray;
+  cursor: default;
+}
+#id:focus, #pwd:focus{
+  outline: none;
+}
+#label_pwd{
+  width: 120px;
+  text-align: left;
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 35px;
+}
+#btnDiv{
+  height: 50px;
+  margin-top: 170px;
+}
+#checkBtn, #cancelBtn{
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-right: 10px;
+}
+#cancelBtn{
+  color: black; 
+  background-color: white;
+  border: 2px solid black;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+#checkBtn:hover{
+  border: none;
+  background-color: rgb(99, 99, 99);
+  color: whitesmoke;
+}
+#cancelBtn:hover{
+  border: 2px solid rgb(225, 225, 225);
+  background-color: rgb(225, 225, 225);
+  color: rgb(84, 84, 84);
+}

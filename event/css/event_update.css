@@ -1,0 +1,72 @@
+#titleDiv{
+  border-bottom: 1px solid black;
+}
+#contentDiv{
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+#contentDiv > h2{
+  margin-left: 30px;
+}
+#contentDiv > hr{
+  border: 1px solid black;
+}
+#titleInput{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid lightgray;
+  margin-left: 50px;
+  margin-top: 40px;
+  padding-left: 10px;
+  font-weight: bold;
+  width: 700px;
+  height: 30px;
+}
+.dateMent{
+  margin-left: 50px;
+  font-weight: bold;
+}
+.dateInput{
+  margin-top: 40px;
+  height: 30px;
+  width: 150px;
+  font-weight: bold;
+}
+#contentInput{
+  border: 1px solid lightgray;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px;
+  outline: none;
+}
+#btnDiv{
+  margin: auto;
+  margin-top: 50px;
+  width: 800px;
+  height: 70px;
+  text-align: center;
+}
+#btnDiv > button{
+  height: 50px;
+  width: 250px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid black;
+  transition: all 0.4s;
+}
+#btnDiv > button:hover{
+  background-color: black;
+  color: white;
+}

@@ -9,12 +9,12 @@ function search(){
 
 function moveUserPage(){
   if(memberNo > 0){
-    location.href='../../member/php/member_myPage.php';   //경로수정
+    location.href='../../member/php/member_myPage.php';
   } else {
-    location.href='./login/login.php';    //경로수정
+    location.href='../../login/php/login_loginPage.php';
   }
 }
 
 function moveCartPage(){
-  location.href='./cartPage/list.php';    //경로수정
+  location.href='../../cart/php/cart_list.php';
 }

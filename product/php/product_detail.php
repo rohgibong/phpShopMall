@@ -13,7 +13,7 @@
 
 <div id="mainDiv">
   <?php include "../../commonFile/php/header.php";?>
-  <?php include "./product_detail_header.php";?>
+  <?php include "./header/product_detail_header.php";?>
 
   <div id="contentDiv">
       <div id="imgDiv">
@@ -88,7 +88,7 @@
                       쇼핑 계속하기
                     </div>
                   </label>
-                  <div id="goWishBtn" onClick="location.href='../../member/member_wishList.php'">관심상품 확인</div>
+                  <div id="goWishBtn" onClick="location.href='../../member/php/member_wishList.php'">관심상품 확인</div>
                 </div>
                 <label for="popup"></label>
               </div>
@@ -112,7 +112,7 @@
                       쇼핑 계속하기
                     </div>
                   </label>
-                  <div id="goWishBtn" onClick="location.href='../../cart/cart_list.php'">장바구니 이동</div>
+                  <div id="goWishBtn" onClick="location.href='../../cart/php/cart_list.php'">장바구니 이동</div>
                 </div>
                 <label for="addCartLabel"></label>
               </div>
