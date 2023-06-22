@@ -66,14 +66,14 @@
             <td id="orderTableFirst" class="tdClass">
               <?=$product[$count]['orderDate'] ?>
             </td>
-            <td id="orderTableSecond" class="tdClass" onClick="location.href='../../product/productDetail.php?productCode=<?=$product[$count]['productCode'] ?>'">
+            <td id="orderTableSecond" class="tdClass" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$product[$count]['productCode'] ?>'">
               <?=$product[$count]['productName'] ?>
             </td>
             <td class="tdClass">
               \<?php echo number_format($orderPrice); ?>
             </td>
             <td class="tdClass">
-              <button type="button" id="viewBtn">VIEW</button>
+              <button type="button" id="viewBtn" onClick="location.href='member_orderDetail.php?orderNo=<?=$product[$count]['orderNo'] ?>'">VIEW</button>
             </td>
           </tr>
           <?php

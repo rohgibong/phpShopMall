@@ -22,7 +22,7 @@
        $level = $row['level'];
     }
   }
-  $sql = "select * from (select row_number() over (order by o.orderDate desc) as rownum, p.*, o.amount, o.orderPrice, o.orderDate from storeproduct p join storeorder o on p.productCode = o.productCode where memberNo = $memberNo) as subquery where rowNum >= $startNum and rowNum <= $endNum;";
+  $sql = "select * from (select row_number() over (order by o.orderDate desc) as rownum, p.*, o.orderNo, o.amount, o.orderPrice, o.orderDate from storeproduct p join storeorder o on p.productCode = o.productCode where memberNo = $memberNo) as subquery where rowNum >= $startNum and rowNum <= $endNum;";
   $result2 = mysqli_query($con, $sql);
   $row_cnt = mysqli_num_rows($result2);
   $count = 0;
@@ -35,6 +35,7 @@
       $product[$num]['delPrice'] = $row['delPrice'];
       $product[$num]['titleImgType'] = $row['titleImgType'];
       $product[$num]['titleImg'] = $row['titleImg'];
+      $product[$num]['orderNo'] = $row['orderNo'];
       $product[$num]['amount'] = $row['amount'];
       $product[$num]['orderPrice'] = $row['orderPrice'];
       $product[$num]['orderDate'] = $row['orderDate'];

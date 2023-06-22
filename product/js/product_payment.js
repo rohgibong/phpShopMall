@@ -4,6 +4,7 @@ function orderItem() {
 
   let productCodeInputs = document.querySelectorAll('input[name="productCodes[]"]');
   let amountInputs = document.querySelectorAll('input[name="amounts[]"]');
+  let delMessage = document.getElementById('delTextArea').value;
 
   productCodeInputs.forEach(function(input) {
     selectedItems1.push(input.value);
@@ -32,6 +33,12 @@ function orderItem() {
     input.value = item;
     form.appendChild(input);
   });
+
+  let delMessageInput = document.createElement('input');
+  delMessageInput.type = 'hidden';
+  delMessageInput.name = 'delMessage';
+  delMessageInput.value = delMessage;
+  form.appendChild(delMessageInput);
 
   document.body.appendChild(form);
   form.submit();
