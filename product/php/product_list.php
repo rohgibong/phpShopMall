@@ -50,40 +50,42 @@
       <span id="totalMent">
         Total : <?=$productCount ?>
       </span>
-      <table id="productTable">
-        <?php
-          while($count < $num): 
-          $count++;
-            if(($count-1)%3 == 0):
-        ?>
-          <tr>
-        <?php endif; ?>
-            <td class="productTd" onClick="location.href='product_detail.php?productCode=<?=$product[$count]['productCode'] ?>'">
-              <?php if($product[$count]['soldOut'] == 'O'): ?>
-                <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" id="soldOutImgId">
-              <?php else: ?>
-                <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" id="imgId">
-              <?php endif; ?>
-              <br>
-              <div id="productInfo">
-                <span id="artistInfo">
-                  <?=$product[$count]['artistName'] ?>
-                </span>
-                <span id="nameInfo">
-                  <?=$product[$count]['productName'] ?>
-                </span>
-                <span id="priceInfo">
+      <div id="heightDiv">
+        <table id="productTable">
+          <?php
+            while($count < $num):
+            $count++;
+              if(($count-1)%3 == 0):
+          ?>
+            <tr>
+          <?php endif; ?>
+              <td class="productTd" onClick="location.href='product_detail.php?productCode=<?=$product[$count]['productCode'] ?>'">
                 <?php if($product[$count]['soldOut'] == 'O'): ?>
-                  <span>SOLD OUT<span>
+                  <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" id="soldOutImgId">
                 <?php else: ?>
-                  \<?php echo number_format($product[$count]
-                  ['productPrice']); ?>
+                  <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" id="imgId">
                 <?php endif; ?>
-                </span>
-              </div>
-            </td>
-        <?php endwhile; ?>
-      </table>
+                <br>
+                <div id="productInfo">
+                  <span id="artistInfo">
+                    <?=$product[$count]['artistName'] ?>
+                  </span>
+                  <span id="nameInfo">
+                    <?=$product[$count]['productName'] ?>
+                  </span>
+                  <span id="priceInfo">
+                  <?php if($product[$count]['soldOut'] == 'O'): ?>
+                    <span>SOLD OUT<span>
+                  <?php else: ?>
+                    \<?php echo number_format($product[$count]
+                    ['productPrice']); ?>
+                  <?php endif; ?>
+                  </span>
+                </div>
+              </td>
+          <?php endwhile; ?>
+        </table>
+      </div>
 
       <div id="pageDiv">
         <?php if($pageNumber > 1 && $cateCode != 0) : ?>
