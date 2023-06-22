@@ -1,3 +1,6 @@
+#titleDiv{
+  border-bottom: 1px solid black;
+}
 #contentDiv{
   width: 1040px;
   height: 600px;
