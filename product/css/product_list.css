@@ -10,7 +10,7 @@
 #sideDiv{
   border-right: 1px solid black;
   width: 200px;
-  height: 1000px;
+  height: 900px;
   float: left;
   padding-top: 50px;
 }
@@ -106,7 +106,7 @@
 }
 #pageDiv{
   height: 30px;
-  width: 1200px;
+  width: 1000px;
   margin: auto;
   margin-top: 30px;
   text-align: center;

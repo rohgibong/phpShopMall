@@ -281,11 +281,11 @@ input[id*="popup"] + label + div > label, input[id*="addCartLabel"] + label + di
   background-color: white;
 }
 #addCartBtn{
-  width: 270px;
+  width: 260px;
   line-height: 47px;
   margin-top: 10px;
   margin-right: 10px;
-  margin-left: 5px;
+  margin-left: 10px;
   color: black;
   background-color: white;
   float: right;

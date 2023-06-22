@@ -28,12 +28,10 @@
       <div class="subTitle" id="subTitle4" onClick="location.href='product_list.php?cateCode=4'">
           CONCERT
       </div>
-      <div class="subTitle" id="subTitle5" onClick="location.href='../funding/list.php'">
-        <!-- 링크수정 -->
+      <div class="subTitle" id="subTitle5" onClick="location.href='../../funding/php/funding_list.php'">
           FUNDING
       </div>
-      <div class="subTitle" id="subTitle6" onClick="location.href='../eventPage/list.php'">
-        <!-- 링크수정 -->
+      <div class="subTitle" id="subTitle6" onClick="location.href='../../event/php/event_list.php'">
           EVENT
       </div>
     </div>

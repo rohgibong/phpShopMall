@@ -74,25 +74,25 @@
           </tr>
           <?php endif; ?>
         </table>
-        <div id="pageDiv">
-        <?php if($pageNumber > 1) : ?>
-          <span class="arrowBtn" onClick="location.href='member_orderPage.php?pageNumber=<?=$pageNumber-1 ?>'">< 이전</span>
-        <?php else : ?>
-          <span class="arrowBtn" id="noName">< 이전</span>
-        <?php endif ; ?>
-        
-        <?php for($page = 1; $page < $pageCount+1; $page++) : ?>
-          <span id="pageSpan" onClick="location.href='member_orderPage.php?pageNumber=<?=$page ?>'">
-            <?=$page ?>
-          </span>
-        <?php endfor; ?>
-        
-        <?php if($pageNumber < $pageCount) : ?>
-          <span class="arrowBtn" onClick="location.href='member_orderPage.php?pageNumber=<?=$pageNumber+1 ?>'">다음 ></span>
-        <?php else : ?>
-          <span class="arrowBtn" id="noName">다음 ></span>
-        <?php endif ; ?>
       </div>
+      <div id="pageDiv">
+      <?php if($pageNumber > 1) : ?>
+        <span class="arrowBtn" onClick="location.href='member_orderPage.php?pageNumber=<?=$pageNumber-1 ?>'">< 이전</span>
+      <?php else : ?>
+        <span class="arrowBtn" id="noName">< 이전</span>
+      <?php endif ; ?>
+      
+      <?php for($page = 1; $page < $pageCount+1; $page++) : ?>
+        <span id="pageSpan" onClick="location.href='member_orderPage.php?pageNumber=<?=$page ?>'">
+          <?=$page ?>
+        </span>
+      <?php endfor; ?>
+      
+      <?php if($pageNumber < $pageCount) : ?>
+        <span class="arrowBtn" onClick="location.href='member_orderPage.php?pageNumber=<?=$pageNumber+1 ?>'">다음 ></span>
+      <?php else : ?>
+        <span class="arrowBtn" id="noName">다음 ></span>
+      <?php endif ; ?>
     </div>
 
   </div>

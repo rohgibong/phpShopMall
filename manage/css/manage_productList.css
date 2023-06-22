@@ -1,0 +1,127 @@
+#mainDiv{
+  width: 1400px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+#titleDiv{
+  height: 100px;
+}
+#mainTitleDiv{
+  position: absolute;
+  margin-left: 610px;
+  height: 100px;
+}
+#mainTitleDiv:hover{
+  cursor: pointer;
+}
+#contentDiv{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 1300px;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+#titleMentDiv{
+  border-bottom: 2px solid lightgray;
+  width: 1200px;
+  height: 30px;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 10px;
+}
+#titleMent{
+  font-weight: bold;
+  font-size: 20px;
+  color: #2E2E2E;
+  margin-left: 10px;
+}
+#productTable{
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+th{
+  height: 60px;
+}
+td{
+  border-top: 1px solid lightgray;
+  height: 60px;
+}
+#firstTd{
+  width: 50px;
+}
+#thirdTd{
+  width: 450px;
+}
+#fourthTd{
+  width: 200px;
+}
+#secondTd, #sixthTd{
+  width: 80px;
+}
+#fifthTd{
+  width: 150px;
+}
+#seventhTd{
+  width: 70px;
+}
+#eightthTd{
+  width: 100px;
+}
+#productTr{
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#productTr:hover{
+  background-color: rgb(245, 245, 245);
+}
+#pageDiv{
+  height: 30px;
+  width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+#selectedPageSpan{
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: red;
+}
+#pageSpan{
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.arrowBtn{
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#noName{
+  color: white;
+  user-select: none;
+  cursor: default;
+}
+#btnDiv{
+  border-top: 2px solid lightgray;
+  margin: auto;
+  text-align: right;
+  height: 30px;
+  width: 1200px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+#productAddBtn{
+  margin-right: 17px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}

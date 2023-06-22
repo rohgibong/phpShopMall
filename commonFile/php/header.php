@@ -19,7 +19,7 @@
       <a href="../../login/php/process/logoutProc.php" id="logoutBtn" class="btnClass">LOGOUT</a>
     <?php else: ?>
       <a href="../../login/php/login_loginPage.php" id="loginBtn" class="btnClass">LOGIN</a> 
-      <a href="../../join/php/join_joinPage.php" id="joinBtn" class="btnClass">JOIN</a>
+      <a href="../../login/php/login_joinMember.php" id="joinBtn" class="btnClass">JOIN</a>
     <?php endif; ?>
   </div>
 </div>

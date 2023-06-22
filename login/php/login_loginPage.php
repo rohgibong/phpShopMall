@@ -54,7 +54,7 @@
 
         <div id="btnDiv">
           <button type="button" onClick="login();" id="loginBtn" >LOGIN</button>
-          <button type="button" onClick="location.href='../../join/php/join_joinPage.php'" id="joinBtn">JOIN US</button>
+          <button type="button" onClick="location.href='../../login/php/login_joinMember.php'" id="joinBtn">JOIN US</button>
         </div>
       </div>
       <input type="hidden" id="previous" name="previous" value="<?= end($previous) ?>">

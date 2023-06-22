@@ -1,3 +1,6 @@
+#mainDiv{
+  height: 800px;
+}
 #categoryDiv{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -21,7 +24,7 @@
 }
 #slideDiv{
   margin: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   height: 500px;
   width: 1000px;
   border: 1px solid lightgray;
@@ -120,7 +123,7 @@
   width: 180px;
   height: 450px;
   float: left;
-  margin-left: 70px;
+  margin-left: 100px;
   margin-top: -500px;
   cursor: pointer;
 }
@@ -128,7 +131,7 @@
   width: 180px;
   height: 450px;
   float: right;
-  margin-right: 70px;
+  margin-right: 100px;
   margin-top: -500px;
   cursor: pointer;
 }
