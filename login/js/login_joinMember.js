@@ -151,6 +151,36 @@ function join(){
       birthYear.style.borderBottom = "1px solid lightgray";
       err2 = 0;
     }
+    if(Number(birthYear.value) > 2023 || Number(birthYear.value) < 1900){
+      label_birth.innerHTML = "생년월일을 정확히 입력해주세요.";
+      label_birth.style.color = "red";
+      label_birth.style.fontSize = "8px";
+      birthYear.style.borderBottom = "1px solid red";
+      err2 = 1;
+    } else {
+      birthYear.style.borderBottom = "1px solid lightgray";
+      err2 = 0;
+    }
+    if(Number(birthMonth.value) > 12 || Number(birthMonth.value) < 1){
+      label_birth.innerHTML = "생년월일을 정확히 입력해주세요.";
+      label_birth.style.color = "red";
+      label_birth.style.fontSize = "8px";
+      birthMonth.style.borderBottom = "1px solid red";
+      err2 = 1;
+    } else {
+      birthMonth.style.borderBottom = "1px solid lightgray";
+      err2 = 0;
+    }
+    if(Number(birthDay.value) > 31 || Number(birthDay.value) < 1){
+      label_birth.innerHTML = "생년월일을 정확히 입력해주세요.";
+      label_birth.style.color = "red";
+      label_birth.style.fontSize = "8px";
+      birthDay.style.borderBottom = "1px solid red";
+      err2 = 1;
+    } else {
+      birthDay.style.borderBottom = "1px solid lightgray";
+      err2 = 0;
+    }
   }
 
   if(phone1.value == "" || phone2.value == "" || phone3.value == ""){

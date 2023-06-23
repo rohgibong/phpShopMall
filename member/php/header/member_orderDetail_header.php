@@ -12,6 +12,7 @@
 ?>
 <script>
   const checkMemberNo = <?php echo $checkMemberNo ?>;
+  const orderNo = <?php echo $orderNo ?>;
   if(memberNo <= 0){
     location.href='../../login/php/login_loginPage.php';
   }
@@ -27,6 +28,7 @@
   $row_cnt = mysqli_num_rows($result2);
   if($row_cnt != 0){
     while($row = mysqli_fetch_assoc($result2)){
+      $productCode = $row['productCode'];
       $productName = $row['productName'];
       $detailName = $row['detailName']; 
       $productPrice = $row['productPrice'];
@@ -39,6 +41,7 @@
       $delMessage = $row['delMessage'];
       $orderDate = $row['orderDate'];
       $delDate = $row['delDate'];
+      $totalPrice = $productPrice * $amount;
     }
   } else {
     echo "<script>alert('잘못된 접근입니다.');location.href='../../home/php/index.php';</script>";

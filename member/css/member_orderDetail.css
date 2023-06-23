@@ -13,8 +13,59 @@
   margin-left: 100px;
 }
 #orderDetailDiv{
-  border: 1px solid black;
   width: 1100px;
   height: 700px;
   margin: auto;
+}
+#orderTable{
+  width: 1100px;
+  text-align: center;
+  border-collapse: collapse;
+  margin: auto;
+}
+.orderTh{
+  border-top: 2px solid black;
+  border-bottom: 1px solid lightgray;
+  height: 50px;
+  padding-top: 30px;
+}
+.orderTd{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+#firstTd, #thirdTd, #fifthTd, #sixthTd{
+  width: 120px;
+}
+#secondTd{
+  text-align: left;
+}
+#secondTdDiv{
+  width: 500px;
+  height: 90px;
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+}
+#secondTdDiv > div{
+  width: 500px;
+  height: 70px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+#secondTdDiv > div:hover{
+  text-decoration: underline;
+}
+#artistNameSpan{
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+}
+#productNameSpan{
+  display: block;
+  font-weight: bold;
+}
+#fourthTd{
+  width: 70px;
 }

@@ -41,10 +41,10 @@
           <td id="secondTd" class="orderTd">
            <div id="secondTdDiv">
               <div>
-                <span id="artistNameSpan" onClick="location.href='productDetail.php?productCode=<?=$product[$count]['productCode']?>'">
+                <span id="artistNameSpan" onClick="location.href='product_detail.php?productCode=<?=$product[$count]['productCode']?>'">
                   <?=$product[$count]['artistName'] ?>
                 </span>
-                <span id="productNameSpan" onClick="location.href='productDetail.php?productCode=<?=$product[$count]['productCode']?>'">
+                <span id="productNameSpan" onClick="location.href='product_detail.php?productCode=<?=$product[$count]['productCode']?>'">
                   <?=$product[$count]['productName'] ?>
                 </span>
               </div>
