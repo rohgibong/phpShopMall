@@ -83,6 +83,7 @@
           <th>수량</th>
           <th>품절여부</th>
           <th>등록일</th>
+          <th>삭제</th>
         </tr>
         <?php
           while($count < $num): 
@@ -122,6 +123,9 @@
           </td>
           <td id="eightthTd">
             <?=$product[$count]['regiDate'] ?>
+          </td>
+          <td id="ninthTd">
+            <button type="button" class="deleteBtn" onClick="deleteOne('<?=$product[$count]['productCode'] ?>', '<?=$product[$count]['productName'] ?>');">X</button>
           </td>
         </tr>
         <?php endwhile; ?>

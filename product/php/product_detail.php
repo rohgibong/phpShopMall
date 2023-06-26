@@ -93,9 +93,15 @@
                 <label for="popup"></label>
               </div>
               <input type="checkbox" id="addCartLabel">
-              <label for="addCartLabel">
-                <div id="addCartBtn" onClick="addCart();">ADD CART</div>
-              </label>
+              <?php if($soldOut == 'O'): ?>
+                <label for="noAdd">
+                  <div id="addCartBtn" onClick="addCart();">ADD CART</div>
+                </label>
+              <?php else: ?>
+                <label for="addCartLabel">
+                  <div id="addCartBtn" onClick="addCart();">ADD CART</div>
+                </label>
+              <?php endif; ?>
               <div>
                 <div>
                   <label for="addCartLabel" id="closeLabel">

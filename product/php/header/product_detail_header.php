@@ -30,6 +30,8 @@
       $contentImg = $row['contentImg'];
       $soldOut = $row['soldOut'];
     }
+  } else {
+    echo "<script>alert('삭제되거나 존재하지 않는 상품입니다.');location.href='../../home/php/index.php';</script>";
   }
   $deliveryDate = date('Y-m-d', strtotime("+$delPeriod days", strtotime($currentDate)));
   $delDate = explode("-", $deliveryDate);
