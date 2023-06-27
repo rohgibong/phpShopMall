@@ -34,48 +34,50 @@
             <?php endif; ?>
           </div>
         </div>
-        <table id="wishTable">
-          <?php if($num > 0):?>
-            <?php
-              while($count < $num):
-              if ($count % 6 == 0) echo '<tr>';
-            ?>
-            <td class="wishItemsTd">
-              <img src="data:image/<?=$wish[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($wish[$count]['titleImg']); ?>" alt="Title Image" id="productImg" width="130px;">
-              <div id="wishItemsDiv" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$wish[$count]['productCode'] ?>'">
-                <div id="nameDiv">
-                  <span id="wishSpan1"><?=$wish[$count]['artistName']?></span>
-                  <span id="wishSpan2"><?=$wish[$count]['productName']?></span>
+        <div id="tableHeightDiv">
+          <table id="wishTable">
+            <?php if($num > 0):?>
+              <?php
+                while($count < $num):
+                if ($count % 6 == 0) echo '<tr>';
+              ?>
+              <td class="wishItemsTd">
+                <img src="data:image/<?=$wish[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($wish[$count]['titleImg']); ?>" alt="Title Image" id="productImg" width="130px;">
+                <div id="wishItemsDiv" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$wish[$count]['productCode'] ?>'">
+                  <div id="nameDiv">
+                    <span id="wishSpan1"><?=$wish[$count]['artistName']?></span>
+                    <span id="wishSpan2"><?=$wish[$count]['productName']?></span>
+                  </div>
+                  <div id="priceDiv">
+                    <span id="wishSpan3">\<?php echo number_format($wish[$count]['productPrice']); ?></span>
+                  </div>
                 </div>
-                <div id="priceDiv">
-                  <span id="wishSpan3">\<?php echo number_format($wish[$count]['productPrice']); ?></span>
+                <div id="deleteDiv">
+                  <button type="button" id="deleteBtn" onClick="deleteOne('<?=$wish[$count]['productCode'] ?>');">삭제</button>
                 </div>
-              </div>
-              <div id="deleteDiv">
-                <button type="button" id="deleteBtn" onClick="deleteOne('<?=$wish[$count]['productCode'] ?>');">삭제</button>
-              </div>
-            </td>
-            <?php
-              $count++;
-              if ($count % 6 == 0 || $count == $num):
-                while($count % 6 != 0):
-            ?>
-            <td class="emptywishItemsTd"></td>
-            <?php
+              </td>
+              <?php
                 $count++;
+                if ($count % 6 == 0 || $count == $num):
+                  while($count % 6 != 0):
+              ?>
+              <td class="emptywishItemsTd"></td>
+              <?php
+                  $count++;
+                  endwhile;
+                  echo '</tr>';
+                endif;
                 endwhile;
-                echo '</tr>';
-              endif;
-              endwhile;
-            ?>
-          <?php else: ?>
-          <tr>
-            <td id="noWishTd">
-              위시리스트 내역이 없습니다.
-            </td>
-          </tr>
-          <?php endif; ?>
-        </table>
+              ?>
+            <?php else: ?>
+            <tr>
+              <td id="noWishTd">
+                위시리스트 내역이 없습니다.
+              </td>
+            </tr>
+            <?php endif; ?>
+          </table>
+        </div>
       </div>
       <div id="pageDiv">
       <?php if($pageNumber > 1) : ?>

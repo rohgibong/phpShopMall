@@ -73,63 +73,65 @@
       <div id="titleMentDiv">
         <span id="titleMent">상품 리스트</span>
       </div>
-      <table id="productTable">
-        <tr>
-          <th>No</th>
-          <th>사진</th>
-          <th>상품명</th>
-          <th>아티스트명</th>
-          <th>카테고리</th>
-          <th>수량</th>
-          <th>품절여부</th>
-          <th>등록일</th>
-          <th>삭제</th>
-        </tr>
-        <?php
-          while($count < $num): 
-          $count++;
-        ?>
-        <tr id="productTr">
-          <td id="firstTd">
-            <?=$product[$count]['rowNum'] ?>
-          </td>
-          <td id="secondTd">
-            <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" width="50px;">
-          </td>
-          <td id="thirdTd">
-            <?=$product[$count]['productName'] ?>
-          </td>
-          <td id="fourthTd">
-            <?=$product[$count]['artistName'] ?>
-          </td>
-          <td id="fifthTd">
-            <?php
-              if($product[$count]['cateCode'] == 1){
-                echo "MUSIC";
-              } else if($product[$count]['cateCode'] == 2){
-                echo "PHOTO";
-              } else if($product[$count]['cateCode'] == 3){
-                echo "FASHION";
-              } else if($product[$count]['cateCode'] == 4){
-                echo "CONCERT";
-              }
-            ?>
-          </td>
-          <td id="sixthTd">
-            <?=$product[$count]['stock'] ?>개
-          </td>
-          <td id="seventhTd">
-            <?=$product[$count]['soldOut'] ?>
-          </td>
-          <td id="eightthTd">
-            <?=$product[$count]['regiDate'] ?>
-          </td>
-          <td id="ninthTd">
-            <button type="button" class="deleteBtn" onClick="deleteOne('<?=$product[$count]['productCode'] ?>', '<?=$product[$count]['productName'] ?>');">X</button>
-          </td>
-        </tr>
-        <?php endwhile; ?>
-      </table>
+      <div id="tableDiv">
+        <table id="productTable">
+          <tr>
+            <th>No</th>
+            <th>사진</th>
+            <th>상품명</th>
+            <th>아티스트명</th>
+            <th>카테고리</th>
+            <th>수량</th>
+            <th>품절여부</th>
+            <th>등록일</th>
+            <th>삭제</th>
+          </tr>
+          <?php
+            while($count < $num):
+            $count++;
+          ?>
+          <tr id="productTr">
+            <td id="firstTd">
+              <?=$product[$count]['rowNum'] ?>
+            </td>
+            <td id="secondTd">
+              <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" width="50px;">
+            </td>
+            <td id="thirdTd">
+              <?=$product[$count]['productName'] ?>
+            </td>
+            <td id="fourthTd">
+              <?=$product[$count]['artistName'] ?>
+            </td>
+            <td id="fifthTd">
+              <?php
+                if($product[$count]['cateCode'] == 1){
+                  echo "MUSIC";
+                } else if($product[$count]['cateCode'] == 2){
+                  echo "PHOTO";
+                } else if($product[$count]['cateCode'] == 3){
+                  echo "FASHION";
+                } else if($product[$count]['cateCode'] == 4){
+                  echo "CONCERT";
+                }
+              ?>
+            </td>
+            <td id="sixthTd">
+              <?=$product[$count]['stock'] ?>개
+            </td>
+            <td id="seventhTd">
+              <?=$product[$count]['soldOut'] ?>
+            </td>
+            <td id="eightthTd">
+              <?=$product[$count]['regiDate'] ?>
+            </td>
+            <td id="ninthTd">
+              <button type="button" class="deleteBtn" onClick="deleteOne('<?=$product[$count]['productCode'] ?>', '<?=$product[$count]['productName'] ?>');">X</button>
+            </td>
+          </tr>
+          <?php endwhile; ?>
+        </table>
+      </div>
       
       <div id="pageDiv">
         <?php if($pageNumber > 1) : ?>

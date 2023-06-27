@@ -15,13 +15,17 @@
   $titleImgData = $_FILES["titleImg"]["tmp_name"];
   $mainImgData = $_FILES["mainImg"]["tmp_name"];
   $contentImgData = $_FILES["contentImg"]["tmp_name"];
-  $soldOut = $_POST["soldOut"];
   $regidate = date("Y-m-d H:i:s");
   
   $titleImg = addslashes(file_get_contents($titleImgData));
   $mainImg = addslashes(file_get_contents($mainImgData));
   $contentImg = addslashes(file_get_contents($contentImgData));
 
+  if($stock == 0){
+    $soldOut = 'O';
+  } else {
+    $soldOut = 'X';
+  }
 
   $con = mysqli_connect("localhost", "user1", "12345", "phpfinalproject");
   $sql = "insert into storeproduct(productName, detailName, productPrice, artistName, stock, cateCode, delPeriod, delPrice, titleImg, mainImg, contentImg, titleImgType, mainImgType, contentImgType, soldOut, regidate) values ('$productName', '$detailName', $productPrice, '$artistName', $stock, $cateCode, $delPeriod, $delPrice, '$titleImg', '$mainImg', '$contentImg', '$titleImgType', '$mainImgType', '$contentImgType', '$soldOut', '$regidate')";

@@ -43,7 +43,7 @@ function add(){
     stock.focus();
     return;
   }
-  if(stock.value <= 0){
+  if(stock.value < 0){
     alert("상품수량을 정확하게 입력해주세요.");
     stock.focus();
     stock.select();
@@ -84,6 +84,29 @@ function add(){
     document.productAddForm.submit();
   }
 }
-function goBack(){
-  
+
+function checkFile(input){
+  let fileElement = document.getElementById(input);
+  let filePath = fileElement.value;
+  let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+  if(!allowedExtensions.exec(filePath)){
+      alert('이미지 파일이 아닙니다.\n이미지 파일만 첨부해주세요.');
+      fileElement.value = '';
+      return false;
+  }
+  return true;
 }
+
+
+document.getElementById('titleImg').addEventListener('change', function() {
+  checkFile('titleImg');
+});
+
+document.getElementById('mainImg').addEventListener('change', function() {
+  checkFile('mainImg');
+});
+
+document.getElementById('contentImg').addEventListener('change', function() {
+  checkFile('contentImg');
+});

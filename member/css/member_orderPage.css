@@ -80,8 +80,11 @@
 #recentOrderTitle > div > span{
   cursor: pointer;
 }
-#orderTable{
+#tableHeightDiv{
   border-bottom: 2px solid black;
+  height: 550px;
+}
+#orderTable{
   width: 1100px;
   margin: auto;
   border-collapse: collapse;

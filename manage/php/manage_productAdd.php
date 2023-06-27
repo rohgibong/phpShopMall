@@ -84,7 +84,7 @@
             배송기간
           </td>
           <td class="contentTd">
-            <input type="text" name="delPeriod" id="delPeriod" maxlength="2" placeholder="0" oninput="this.value = this.value.replace(/\D/g, '');"> 일
+            <input type="text" name="delPeriod" id="delPeriod" maxlength="2" placeholder="1" oninput="this.value = this.value.replace(/\D/g, '');"> 일
           </td>
         </tr>
         <tr>
@@ -105,7 +105,7 @@
             <span id="mentId">설명 이미지 :</span> <input type="file" name="contentImg" id="contentImg">
           </td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td class="titleTd" id="lastTd">
             품절여부
           </td>
@@ -115,7 +115,7 @@
               <option value="X" selected>X</option>
             </select>
           </td>
-        </tr>
+        </tr> -->
       </table>
       
         

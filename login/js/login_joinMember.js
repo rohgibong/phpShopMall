@@ -51,7 +51,39 @@ phone3.addEventListener("input", function() {
   }
 });
 
+function checkInput(input) {
+  let inputElement = document.getElementById(input);
+  let inputValue = inputElement.value;
+  let invalidCharacters = /[^a-zA-Z0-9]/g;
+
+  if(invalidCharacters.test(inputValue)) {
+    label_id.innerHTML = "아이디는 알파벳 대소문자와 숫자만 사용 가능합니다.";
+    label_id.style.color = "red";
+    label_id.style.fontSize = "8px";
+    id.style.borderBottom = "1px solid red";
+    return false;
+  } else {
+    label_id.innerHTML = "";
+    id.style.borderBottom = "1px solid lightgray";
+    return true;
+  }
+}
+
+document.getElementById('id').addEventListener('input', function() {
+  checkInput('id');
+});
+
+function validateEmail(email) {
+  let re = /[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return re.test(email);
+}
+
+
 function idCheck(){
+  if (!checkInput('id')) {
+    return;
+  }
+
   if(id.value == ""){
     label_id.innerHTML = "아이디를 입력해주세요.";
     label_id.style.color = "red";
@@ -369,10 +401,17 @@ function join(){
     }
     err8 = 1;
   } else {
-    label_email.innerHTML = "";
     email1.style.borderBottom = "1px solid lightgray";
-    email2.style.borderBottom = "1px solid lightgray";
-    err8 = 0;
+    if(!validateEmail(email2.value)){
+      label_email.innerHTML = "올바른 이메일 형식을 입력해주세요.";
+      label_email.style.color = "red";
+      label_email.style.fontSize = "8px";
+      email2.style.borderBottom = "1px solid red";
+    } else {
+      label_email.innerHTML = "";
+      email2.style.borderBottom = "1px solid lightgray";
+      err8 = 0;
+    }
   }
 
   errCode = (err1 + err2 + err3 + err4 + err5 + err6 + err7 + err8);

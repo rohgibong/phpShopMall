@@ -28,52 +28,54 @@
             <span onClick="location.href='member_orderPage.php'">ORDER</span>
           </div>
         </div>
-        <table id="orderTable">
-          <?php if($num > 0):?>
-          <tr>
-            <th>
-              주문일자
-            </th>
-            <th>
-              주문정보
-            </th>
-            <th>
-              결제금액
-            </th>
-            <th>
-              주문상세
-            </th>
-          </tr>
-          <?php
-            while($count < $num):
-            $orderPrice = $product[$count]['orderPrice'] + $product[$count]['delPrice']
-          ?>
-          <tr>
-            <td id="orderTableFirst" class="tdClass">
-              <?=$product[$count]['orderDate'] ?>
-            </td>
-            <td id="orderTableSecond" class="tdClass" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$product[$count]['productCode'] ?>'">
-              <?=$product[$count]['productName'] ?>
-            </td>
-            <td class="tdClass">
-              \<?php echo number_format($orderPrice); ?>
-            </td>
-            <td class="tdClass">
-              <button type="button" id="viewBtn" onClick="location.href='member_orderDetail.php?orderNo=<?=$product[$count]['orderNo'] ?>'">VIEW</button>
-            </td>
-          </tr>
-          <?php
-            $count++;
-            endwhile;
-          ?>
-          <?php else: ?>
-          <tr>
-            <td id="noOrderTd">
-              주문내역이 없습니다.
-            </td>
-          </tr>
-          <?php endif; ?>
-        </table>
+        <div id="tableHeightDiv">
+          <table id="orderTable">
+            <?php if($num > 0):?>
+            <tr>
+              <th>
+                주문일자
+              </th>
+              <th>
+                주문정보
+              </th>
+              <th>
+                결제금액
+              </th>
+              <th>
+                주문상세
+              </th>
+            </tr>
+            <?php
+              while($count < $num):
+              $orderPrice = $product[$count]['orderPrice'] + $product[$count]['delPrice']
+            ?>
+            <tr>
+              <td id="orderTableFirst" class="tdClass">
+                <?=$product[$count]['orderDate'] ?>
+              </td>
+              <td id="orderTableSecond" class="tdClass" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$product[$count]['productCode'] ?>'">
+                <?=$product[$count]['productName'] ?>
+              </td>
+              <td class="tdClass">
+                \<?php echo number_format($orderPrice); ?>
+              </td>
+              <td class="tdClass">
+                <button type="button" id="viewBtn" onClick="location.href='member_orderDetail.php?orderNo=<?=$product[$count]['orderNo'] ?>'">VIEW</button>
+              </td>
+            </tr>
+            <?php
+              $count++;
+              endwhile;
+            ?>
+            <?php else: ?>
+            <tr>
+              <td id="noOrderTd">
+                주문내역이 없습니다.
+              </td>
+            </tr>
+            <?php endif; ?>
+          </table>
+        </div>
       </div>
       <div id="pageDiv">
       <?php if($pageNumber > 1) : ?>

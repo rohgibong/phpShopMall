@@ -22,14 +22,14 @@
   margin-right: 10px;
   font-size: 13px;
 }
-#productListBtn{
+#productListBtn, #memberListBtn{
   float: left;
   margin-left: 50px;
 }
 #loginBtn{
   margin-right: 20px;
 }
-#productListBtn, #loginBtn, #joinBtn, #logoutBtn, .categoryName{
+#productListBtn, #memberListBtn, #loginBtn, #joinBtn, #logoutBtn, .categoryName{
   text-decoration-line: none;
   font-weight: bold;
   color: black;

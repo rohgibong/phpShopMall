@@ -1,8 +1,8 @@
   <?php
     $memberNo = $_POST["memberNo"];
     $birth1 = $_POST["birth1"];
-    $birth2 = $_POST["birth2"];
-    $birth3 = $_POST["birth3"];
+    $birth2 = str_pad($_POST["birth2"], 2, '0', STR_PAD_LEFT);
+    $birth3 = str_pad($_POST["birth3"], 2, '0', STR_PAD_LEFT);
     $phone1 = $_POST["phone1"];
     $phone2 = $_POST["phone2"];
     $phone3 = $_POST["phone3"];

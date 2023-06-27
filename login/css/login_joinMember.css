@@ -158,7 +158,7 @@ h1{
   color: rgb(84, 84, 84);
 }
 #label_name, #label_birth, #label_phone, #label_id, #label_pwd, #label_pwdChk, #label_address{
-  width: 200px;
+  width: 300px;
   margin-top: 5px;
   position: absolute;
 }

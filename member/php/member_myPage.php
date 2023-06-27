@@ -100,7 +100,7 @@
           <?php
             while($count2 < $num2):
           ?>
-            <td class="wishItemsTd" onClick="location.href='../../product/productDetail.php?productCode=<?=$wish[$count2]['productCode'] ?>'">
+            <td class="wishItemsTd" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$wish[$count2]['productCode'] ?>'">
               <img src="data:image/<?=$wish[$count2]['titleImgType'] ?>;base64,<?php echo base64_encode($wish[$count2]['titleImg']); ?>" alt="Title Image" id="productImg" width="130px;">
               <div id="wishItemsDiv">
                 <div id="nameDiv">

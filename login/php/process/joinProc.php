@@ -3,8 +3,8 @@
 
   $name = $_POST["name"];
   $birthYear = $_POST["birthYear"];
-  $birthMonth = $_POST["birthMonth"];
-  $birthDay = $_POST["birthDay"];
+  $birthMonth = str_pad($_POST["birthMonth"], 2, '0', STR_PAD_LEFT);
+  $birthDay = str_pad($_POST["birthDay"], 2, '0', STR_PAD_LEFT);
   $gender = $_POST["gender"];
   $phone1 = $_POST["phone1"];
   $phone2 = $_POST["phone2"];

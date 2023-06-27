@@ -12,6 +12,7 @@
   <div id="topDivMent">
     <?php if($memberNo == 1 ): ?>
       <a href="../../manage/php/manage_productList.php" id="productListBtn">상품관리</a>
+      <a href="../../manage/php/manage_memberList.php" id="memberListBtn">회원관리</a>
       <span id="adminMent">[관리자]</span><span id="myName"><?=$name ?>(<?=$id?>)님</span>
       <a href="../../login/php/process/logoutProc.php" id="logoutBtn">LOGOUT</a>
     <?php elseif($memberNo > 1): ?>
