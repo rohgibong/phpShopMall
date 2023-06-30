@@ -1,0 +1,52 @@
+#mainDiv{
+  width: 1400px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+#titleDiv{
+  height: 100px;
+}
+#mainTitleDiv{
+  position: absolute;
+  margin-left: 610px;
+  height: 100px;
+}
+#mainTitleDiv:hover{
+  cursor: pointer;
+}
+#contentDiv{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 1400px;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+#titleMentDiv{
+  border-bottom: 2px solid lightgray;
+  width: 1300px;
+  height: 30px;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 10px;
+}
+#titleMent{
+  font-weight: bold;
+  font-size: 20px;
+  color: #2E2E2E;
+  margin-left: 10px;
+}
+#tableDiv{
+  height: 360px;
+}
+#productTable{
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+th{
+  height: 60px;
+}

@@ -1,0 +1,80 @@
+#mainDiv{
+  width: 1400px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+#titleDiv{
+  height: 100px;
+}
+#mainTitleDiv{
+  position: absolute;
+  margin-left: 610px;
+  height: 100px;
+}
+#mainTitleDiv:hover{
+  cursor: pointer;
+}
+#contentDiv{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+#titleMentDiv{
+  border-bottom: 2px solid lightgray;
+  width: 900px;
+  height: 30px;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 10px;
+}
+#titleMent{
+  font-weight: bold;
+  font-size: 20px;
+  color: #2E2E2E;
+  margin-left: 10px;
+}
+#tableDiv{
+  height: 660px;
+}
+#memberTable{
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+th{
+  height: 60px;
+}
+td{
+  border-top: 1px solid lightgray;
+  height: 60px;
+}
+#firstTd{
+  width: 100px;
+}
+#secondTd{
+  width: 80px;
+}
+#thirdTd{
+  width: 60px;
+}
+#fourthTd{
+  width: 60px;
+}
+#fifthTd{
+  width: 150px;
+}
+#sixthTd{
+  width: 200px;
+}
+#seventhTd{
+  width: 100px;
+}
+#eightthTd{
+  width: 100px;
+}

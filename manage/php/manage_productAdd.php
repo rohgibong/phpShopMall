@@ -105,17 +105,6 @@
             <span id="mentId">설명 이미지 :</span> <input type="file" name="contentImg" id="contentImg">
           </td>
         </tr>
-        <!-- <tr>
-          <td class="titleTd" id="lastTd">
-            품절여부
-          </td>
-          <td class="contentTd" id="lastTd">
-            <select name="soldOut" id="soldOut">
-              <option value="O">O</option>
-              <option value="X" selected>X</option>
-            </select>
-          </td>
-        </tr> -->
       </table>
       
         
