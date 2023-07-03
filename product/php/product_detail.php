@@ -24,6 +24,8 @@
         <?php endif; ?>
       </div>
       <div id="orderDiv">
+        <button>품절</button>
+        <button id="btn1">수정</button>
           <div id="orderContentDiv">
             <span id="artistNameId"><?=$artistName ?></span>
             <div id="productNameDiv">
