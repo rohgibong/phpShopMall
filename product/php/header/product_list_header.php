@@ -14,7 +14,7 @@
   }
 </script>
 <?php
-  $pageSet = 6;
+  $pageSet = 9;
   $startNum = ($pageSet * ($pageNumber-1) + 1);
   $endNum = $pageSet * $pageNumber;
   if($searchValue == 0){

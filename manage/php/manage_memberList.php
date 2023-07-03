@@ -79,6 +79,31 @@
         ?>
       </table>
     </div>
+    <div id="pageDiv">
+        <?php if($pageNumber > 1) : ?>
+          <span class="arrowBtn" onClick="location.href='manage_memberList.php?pageNumber=<?=$pageNumber-1 ?>'">< 이전</span>
+        <?php else : ?>
+          <span class="arrowBtn" id="noName">< 이전</span>
+        <?php endif ; ?>
+        
+        <?php for($page = 1; $page < $pageCount+1; $page++) : ?>
+          <?php if($pageNumber == $page) : ?>
+            <span id="selectedPageSpan" onClick="location.href='manage_memberList.php?pageNumber=<?=$page ?>'">
+              <?=$page ?>
+            </span>
+          <?php else: ?>
+            <span id="pageSpan" onClick="location.href='manage_memberList.php?pageNumber=<?=$page ?>'">
+              <?=$page ?>
+            </span>
+          <?php endif; ?>
+        <?php endfor; ?>
+        
+        <?php if($pageNumber < $pageCount) : ?>
+          <span class="arrowBtn" onClick="location.href='manage_memberList.php?pageNumber=<?=$pageNumber+1 ?>'">다음 ></span>
+        <?php else : ?>
+          <span class="arrowBtn" id="noName">다음 ></span>
+        <?php endif ; ?>
+      </div>
 
   </div>
   

@@ -7,6 +7,7 @@
   <title>MyGoodsStore</title>
   <link rel="stylesheet" href="../../commonFile/css/header.css">
   <link rel="stylesheet" href="../css/product_list.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   
@@ -111,11 +112,18 @@
         <?php if($pageNumber < $pageCount && $cateCode != 0) : ?>
           <span class="arrowBtn" onClick="location.href='product_list.php?cateCode=<?=$cateCode?>&pageNumber=<?=$pageNumber+1 ?>'">다음 ></span>
         <?php elseif($pageNumber < $pageCount && $cateCode == 0) : ?>
-            <span class="arrowBtn" onClick="location.href='product_list.php?searchValue=<?=$searchValue?>&pageNumber=<?=$pageNumber+1 ?>'">다음 ></span>
+          <span class="arrowBtn" onClick="location.href='product_list.php?searchValue=<?=$searchValue?>&pageNumber=<?=$pageNumber+1 ?>'">다음 ></span>
         <?php else : ?>
           <span class="arrowBtn" id="noName">다음 ></span>
         <?php endif ; ?>
       </div>
+    </div>
+    <div id="adContainer">
+      <a id="adLink" href="#">
+        <img id="adImage" src="" alt="광고 배너" width="120px">
+      </a>
+      <br>
+      <button id="scrollTopBtn">Top</button>
     </div>
 
   </div>

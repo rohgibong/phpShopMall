@@ -57,6 +57,10 @@ td{
 #firstTd{
   width: 100px;
 }
+#firstTd > span{
+  font-weight: bold;
+  color: red;
+}
 #secondTd{
   width: 80px;
 }
@@ -77,4 +81,35 @@ td{
 }
 #eightthTd{
   width: 100px;
+}
+#pageDiv{
+  height: 30px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+#selectedPageSpan{
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: red;
+}
+#pageSpan{
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.arrowBtn{
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#noName{
+  color: white;
+  user-select: none;
+  cursor: default;
 }

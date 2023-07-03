@@ -15,7 +15,7 @@
   $startNum = ($pageSet * ($pageNumber-1) + 1);
   $endNum = $pageSet * $pageNumber;
   $con = mysqli_connect("localhost", "user1", "12345", "phpfinalproject");
-  $sql = "select * from (select row_number() over(order by regiDate asc) as rowNum, m.* from storemember m) as subquery where rowNum >= $startNum and rowNum <= $endNum;";
+  $sql = "select * from (select row_number() over(order by memberNo asc) as rowNum, m.* from storemember m) as subquery where rowNum >= $startNum and rowNum <= $endNum;";
   $result = mysqli_query($con, $sql);
   $row_cnt = mysqli_num_rows($result);
   $count = 0;
