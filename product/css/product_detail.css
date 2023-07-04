@@ -28,14 +28,22 @@
 #orderDiv > button{
   float: right;
 }
-#btn1{
+.manageBtn{
+  width: 50px;
+  height: 25px;
   margin-right: 10px;
+  background-color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+#soldoutBtn{
+  margin-right: 70px;
 }
 #orderContentDiv{
   width: 400px;
   height: 400px;
   margin: auto;
-
 }
 #artistNameId{
   display: block;
@@ -317,4 +325,22 @@ input[id*="popup"] + label + div > label, input[id*="addCartLabel"] + label + di
 }
 #detailImgId{
   margin-left: 100px;
+}
+#adContainer {
+  border: 1px solid gray;
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  padding-bottom: 10px;
+}
+#scrollTopBtn{
+  width: 40px;
+  cursor: pointer;
+  background-color: white;
+  font-weight: bold;
+  color: gray;
+  border: 2px solid gray;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 38px;
 }

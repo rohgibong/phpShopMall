@@ -24,8 +24,10 @@
         <?php endif; ?>
       </div>
       <div id="orderDiv">
-        <button>품절</button>
-        <button id="btn1">수정</button>
+        <?php if($memberNo == 1 ): ?>
+          <button id="soldoutBtn" class="manageBtn" onClick="soldout('<?=$soldOut ?>');">품절</button>
+          <button id="modifyBtn" class="manageBtn" onClick="modify();">수정</button>
+        <?php endif; ?>
           <div id="orderContentDiv">
             <span id="artistNameId"><?=$artistName ?></span>
             <div id="productNameDiv">
@@ -63,7 +65,7 @@
             </div><br>
             <div id="btnDiv">
               <?php if($soldOut == 'O'): ?>
-                <button id="buyBtn">BUY NOW</button><br>
+                <button id="buyBtn" onClick="alert('품절된 상품입니다.');">BUY NOW</button><br>
               <?php else: ?>
                 <button id="buyBtn" onClick="buy();">BUY NOW</button><br>
               <?php endif; ?>
@@ -97,7 +99,7 @@
               <input type="checkbox" id="addCartLabel">
               <?php if($soldOut == 'O'): ?>
                 <label for="noAdd">
-                  <div id="addCartBtn" onClick="addCart();">ADD CART</div>
+                  <div id="addCartBtn" onClick="alert('품절된 상품입니다.');">ADD CART</div>
                 </label>
               <?php else: ?>
                 <label for="addCartLabel">
@@ -130,6 +132,13 @@
       <div id="detailImgDiv">
         <img src="data:image/<?=$contentImgType ?>;base64,<?php echo base64_encode($contentImg); ?>" alt="Content Image" width="800px;" id="detailImgId">
       </div>
+    <div id="adContainer">
+      <a id="adLink" href="#">
+        <img id="adImage" src="" alt="광고 배너" width="120px">
+      </a>
+      <br>
+      <button id="scrollTopBtn">Top</button>
+    </div>
   </div>
 </div>
 
