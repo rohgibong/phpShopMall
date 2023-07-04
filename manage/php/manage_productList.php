@@ -45,7 +45,7 @@
             <td id="secondTd">
               <img src="data:image/<?=$product[$count]['titleImgType'] ?>;base64,<?php echo base64_encode($product[$count]['titleImg']); ?>" alt="Main Image" width="50px;">
             </td>
-            <td id="thirdTd" onClick="move('<?=$product[$count]['productCode'] ?>');">
+            <td id="thirdTd" onClick="location.href='../../product/php/product_detail.php?productCode=<?=$product[$count]['productCode'] ?>'">
               <?=$product[$count]['productName'] ?>
             </td>
             <td id="fourthTd">
@@ -74,7 +74,7 @@
               <?=$product[$count]['regiDate'] ?>
             </td>
             <td id="ninthTd">
-              <button type="button" class="deleteBtn" onClick="deleteOne('<?=$product[$count]['productCode'] ?>', '<?=$product[$count]['productName'] ?>');">X</button>
+              <button type="button" class="deleteBtn" onClick="deleteOne('<?=$product[$count]['productCode'] ?>', '<?=$product[$count]['productName'] ?>', '<?=$product[$count]['soldOut'] ?>');">X</button>
             </td>
           </tr>
           <?php endwhile; ?>
@@ -113,12 +113,6 @@
       </div>
     </div>
   </form>
-
-  <form name="detailForm" action="manage_productDetail.php" method="post">
-    <input type="hidden" name="productCode" id="productCode">
-  </form>
-
-
 </div>
   
 <script src="../js/manage_productList.js"></script>

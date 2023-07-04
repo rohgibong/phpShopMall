@@ -5,7 +5,7 @@
 ?>
 <script>
   const memberNo = <?php echo $memberNo ?>;
-  const productCode = <?php echo $productCode?>;
+  const productCode = <?php echo $productCode ?>;
   if(memberNo != 1 || productCode == 0){
     alert('잘못된 접근입니다.');
     location.href='../../../home/php/index.php';

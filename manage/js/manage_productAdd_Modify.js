@@ -1,17 +1,17 @@
-let productName = document.productAddForm.productName;
-let detailName = document.productAddForm.detailName;
-let productPrice = document.productAddForm.productPrice;
-let artistName = document.productAddForm.artistName;
-let stock = document.productAddForm.stock;
-let cateCode = document.productAddForm.cateCode;
-let delPeriod = document.productAddForm.delPeriod;
-let delPrice = document.productAddForm.delPrice;
-let titleImg = document.productAddForm.titleImg;
-let mainImg = document.productAddForm.mainImg;
-let contentImg = document.productAddForm.contentImg;
-let soldOut = document.productAddForm.soldOut;
+let productName = document.productForm.productName;
+let detailName = document.productForm.detailName;
+let productPrice = document.productForm.productPrice;
+let artistName = document.productForm.artistName;
+let stock = document.productForm.stock;
+let cateCode = document.productForm.cateCode;
+let delPeriod = document.productForm.delPeriod;
+let delPrice = document.productForm.delPrice;
+let titleImg = document.productForm.titleImg;
+let mainImg = document.productForm.mainImg;
+let contentImg = document.productForm.contentImg;
+let soldOut = document.productForm.soldOut;
 
-function add(){
+function formInput(checkValue){
   if(productName.value == ""){
     alert("상품명을 입력해주세요.");
     productName.focus();
@@ -65,23 +65,29 @@ function add(){
     delPrice.focus();
     return;
   }
-  if(titleImg.value == ""){
-    alert("배너이미지를 등록해주세요.");
-    titleImg.focus();
-    return;
-  }
-  if(mainImg.value == ""){
-    alert("메인이미지를 등록해주세요.");
-    mainImg.focus();
-    return;
-  }
-  if(contentImg.value == ""){
-    alert("설명이미지를 등록해주세요.");
-    contentImg.focus();
-    return;
-  }
-  if(confirm("등록 하시겠습니까?")){
-    document.productAddForm.submit();
+  if(checkValue == "add"){
+    if(titleImg.value == ""){
+      alert("배너이미지를 등록해주세요.");
+      titleImg.focus();
+      return;
+    }
+    if(mainImg.value == ""){
+      alert("메인이미지를 등록해주세요.");
+      mainImg.focus();
+      return;
+    }
+    if(contentImg.value == ""){
+      alert("설명이미지를 등록해주세요.");
+      contentImg.focus();
+      return;
+    }
+    if(confirm("등록 하시겠습니까?")){
+      document.productForm.submit();
+    }
+  } else {
+    if(confirm("수정 하시겠습니까?")){
+      document.productForm.submit();
+    }
   }
 }
 
@@ -110,3 +116,7 @@ document.getElementById('mainImg').addEventListener('change', function() {
 document.getElementById('contentImg').addEventListener('change', function() {
   checkFile('contentImg');
 });
+
+function goBack(){
+  window.history.back();
+}

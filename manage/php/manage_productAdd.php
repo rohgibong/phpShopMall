@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyGoodsStore</title>
-  <link rel="stylesheet" href="../css/manage_productAdd.css">
+  <link rel="stylesheet" href="../css/manage_productAdd_Modify.css">
 </head>
 <body>
   <?php
@@ -26,13 +26,13 @@
     </div>
   </div>
 
-  <form name="productAddForm" action="./process/productAddProc.php" method="post" enctype="multipart/form-data">
+  <form name="productForm" action="./process/productAddProc.php" method="post" enctype="multipart/form-data">
     <div id="contentDiv">
       <div id="titleMentDiv">
         <span id="titleMent">상품 등록</span>
       </div>
       
-      <table id="addTable">
+      <table id="productTable">
         <tr>
           <td class="titleTd">
             상품명
@@ -109,15 +109,15 @@
       
         
       <div id="btnDiv">
-        <button type="button" onClick="add();" id="addBtn">등록</button>
+        <button type="button" onClick="formInput('add');" id="formInputBtn">등록</button>
         
-        <button type="button" onClick="location.href='manage_productList.php'" id="cancelBtn">취소</button>
+        <button type="button" onClick="goBack();" id="cancelBtn">취소</button>
       </div>
     </div>
   </form>
 
 
 </div>
-<script src="../js/manage_productAdd.js"></script>
+<script src="../js/manage_productAdd_Modify.js"></script>
 </body>
 </html>
