@@ -53,6 +53,7 @@
   </div>
 
   <form name="productForm" action="./process/productModifyProc.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="productCode" id="productCode" value="<?=$productCode ?>">
     <div id="contentDiv">
       <div id="titleMentDiv">
         <span id="titleMent">상품 수정</span>

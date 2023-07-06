@@ -171,7 +171,5 @@ function soldout(soldOut){
 }
 
 function modify(){
-  if(confirm("해당 상품의 정보를 수정하시겠습니까?")){
-    location.href="../../manage/php/manage_productModify.php?productCode="+productCode;
-  }
+  location.href="../../manage/php/manage_productModify.php?productCode="+productCode;
 }

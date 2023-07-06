@@ -130,6 +130,17 @@ td{
   margin-top: 20px;
   padding-top: 10px;
 }
+#btnDiv > div{
+  float: left;
+  height: 100%;
+  width: 500px;
+  text-align: left;
+}
+#btnDiv > div > span{
+  margin-left: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
 #productAddBtn{
   margin-right: 17px;
   font-size: 14px;

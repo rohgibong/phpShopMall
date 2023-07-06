@@ -109,6 +109,12 @@
         
        
       <div id="btnDiv">
+        <div>
+          <span onClick="location.href='../../product/php/product_list.php?cateCode=1'">MUSIC</span>
+          <span onClick="location.href='../../product/php/product_list.php?cateCode=2'">PHOTO</span>
+          <span onClick="location.href='../../product/php/product_list.php?cateCode=3'">FASHION</span>
+          <span onClick="location.href='../../product/php/product_list.php?cateCode=4'">CONCERT</span>
+        </div>
         <span id="productAddBtn" onClick="productAdd();">상품추가</span>
       </div>
     </div>
