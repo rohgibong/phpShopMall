@@ -38,13 +38,22 @@
       </div>
 
       <div id="eventDiv">
-        <span id="eventTableMent">진행중인 이벤트</span>
+        <!-- <span id="eventTableMent">진행중인 이벤트</span> -->
+        <select id="eventTableMent" onChange="changeEvent(this.value);">
+          <?php if($process == 'o'): ?>
+            <option value="o" selected>진행중인 이벤트</option>
+            <option value="x">종료된 이벤트</option>
+            <?php else: ?>
+              <option value="o">진행중인 이벤트</option>
+              <option value="x" selected>종료된 이벤트</option>
+          <?php endif; ?>
+        </select>
         <div id="eventPlace">
           <table id="eventTable" border="0">
           <?php if($num == 0): ?>
             <tr>
               <td id="emtpyTd">
-                진행중인 이벤트가 없습니다.
+                이벤트가 없습니다.
               </td>
             </tr>
           <?php else : ?>

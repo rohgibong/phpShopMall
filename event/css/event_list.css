@@ -40,10 +40,13 @@
   padding-top: 50px;
 }
 #eventTableMent{
-  display: block;
+  
   margin-left: 50px;
   margin-bottom: 10px;
+  padding-right: 10px;
   font-weight: bold;
+  border: none;
+  outline: none;
 }
 #eventPlace{
   border-top: 2px solid black;

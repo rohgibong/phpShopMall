@@ -1,12 +1,25 @@
 <?php
+  $process = isset($_GET["process"]) ? $_GET["process"] : 'o';
   $pageNumber = isset($_GET["pageNumber"]) ? $_GET["pageNumber"] : 1;
 ?>
+<script>
+    const process = <?php echo $process ?>;
+  if(process != 'x' && process != 'o'){
+    alert('잘못된 접근입니다.');
+    window.history.back();
+  }
+</script>
 <?php
   $pageSet = 5;
   $startNum = ($pageSet * ($pageNumber-1) + 1);
   $endNum = $pageSet * $pageNumber;
+  $currentDate = date("Y-m-d");
   $con = mysqli_connect("localhost", "user1", "12345", "phpfinalproject");
-  $sql = "select * from (select row_number() over(order by regiDate desc) as rowNum, e.* from storeevent e) as subquery where rowNum >= $startNum and rowNum <= $endNum;";
+  if($process == 'x'){
+    $sql = "select * from (select row_number() over(order by regiDate desc) as rowNum, e.* from storeevent e where endDate < '$currentDate') as subquery where rowNum >= $startNum and rowNum <= $endNum;";
+  } else {
+    $sql = "select * from (select row_number() over(order by regiDate desc) as rowNum, e.* from storeevent e where endDate >= '$currentDate') as subquery where rowNum >= $startNum and rowNum <= $endNum;";
+  }
   $result = mysqli_query($con, $sql);
   $row_cnt = mysqli_num_rows($result);
   $count = 0;
