@@ -15,8 +15,8 @@
   text-align: center;
 }
 .categoryName{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 75px;
+  margin-right: 75px;
   transition: all 0.4s;
 }
 .categoryName:hover{

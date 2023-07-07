@@ -29,16 +29,12 @@
         <div class="subTitle" onClick="location.href='../../product/php/product_list.php?cateCode=4'">
             CONCERT
         </div>
-        <div class="subTitle" onClick="location.href='../../funding/php/funding_list.php'">
-            FUNDING
-        </div>
         <div class="changeTitle" onClick="location.href='event_list.php'">
             EVENT
         </div>
       </div>
 
       <div id="eventDiv">
-        <!-- <span id="eventTableMent">진행중인 이벤트</span> -->
         <select id="eventTableMent" onChange="changeEvent(this.value);">
           <?php if($process == 'o'): ?>
             <option value="o" selected>진행중인 이벤트</option>

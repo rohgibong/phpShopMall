@@ -60,7 +60,7 @@
                 \<?php echo number_format($orderPrice); ?>
               </td>
               <td class="tdClass">
-                <button type="button" id="viewBtn" onClick="location.href='member_orderDetail.php?orderNo=<?=$product[$count]['orderNo'] ?>'">VIEW</button>
+                <button type="button" id="viewBtn" onClick="viewDetail('<?=$product[$count]['orderNo'] ?>');">VIEW</button>
               </td>
             </tr>
             <?php
