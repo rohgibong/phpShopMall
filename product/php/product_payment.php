@@ -69,6 +69,10 @@
           $count++;
           endwhile;
         ?>
+        <script>
+          const totalPrice = <?php echo $pricePlus + $delPlus ?>;
+          const calTotalPrice = +totalPrice;
+        </script>
         <tr>
           <td colspan="6" id="totalTd" class="orderTd">
             <div id="totalDiv">
@@ -115,7 +119,7 @@
           <tr>
             <td class="delInfoName">배송메시지</td>
             <td class="delInfoTd">
-              <textarea name="delTextArea" id="delTextArea" cols="50" rows="5" placeholder="ex)부재 시 문 앞에 놓아주세요."></textarea>
+              <textarea name="delTextArea" id="delTextArea" cols="60" rows="5" placeholder="ex)부재 시 문 앞에 놓아주세요."></textarea>
             </td>
           </tr>
         </table>
@@ -133,17 +137,19 @@
             <td class="payTd">\<?php echo number_format($delPlus); ?></td>
           </tr>
           <tr>
+            <th class="payTh">총 결제금액</th>
+            <td class="payTd">\<?php echo number_format($pricePlus+$delPlus); ?></td>
+          </tr>
+          <tr>
             <th class="payTh">사용 포인트</th>
             <td class="payTd">
-              <input type="text">
+              <input type="text" id="pointInput" value="0" maxlength="<?php echo $pointLength; ?>" oninput="checkInput(event);"> P
+              <button id="pointBtn" onClick="inputPoint();">모두 사용</button>
+              <span id="myPointId">(보유 포인트 : <?=$point ?>P)</span>
             </td>
           </tr>
           <tr>
-            <th class="payTh">총 결제금액</th>
-            <td class="payTd">0원</td>
-          </tr>
-          <tr>
-            <th class="payTh">결제방법</th>
+            <th class="payTh">결제 방법</th>
             <td id="radioTd">
               <input type="radio" checked> 계좌이체
               <input type="radio"> 신용/체크카드

@@ -142,8 +142,10 @@
   height: 150px;
 }
 #delTextArea{
+  margin-top: 5px;
   font-size: 16px;
   font-weight: bold;
+  outline: none;
 }
 #payDiv{
   width: 1300px;
@@ -155,7 +157,7 @@
 .payTh{
   border-bottom: 1px solid black;
   border-right: 1px solid black;
-  height: 50px;
+  height: 60px;
   width: 170px;
   font-size: 14px;
 }
@@ -163,6 +165,27 @@
   border-bottom: 1px solid black;
   text-align: left;
   padding-left: 20px;
+}
+#pointInput{
+  height: 30px;
+  width: 80px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+}
+#pointBtn{
+  height: 30px;
+  width: 80px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+#myPointId{
+  font-size: 12px;
+  font-weight: bold;
 }
 #radioTd{
   text-align: left;
