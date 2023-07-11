@@ -110,11 +110,19 @@
   float: right;
   cursor: pointer;
 }
+#orderTableHeightDiv{
+  height: 318px;
+  border-bottom: 2px solid black;
+  margin-bottom: 100px;
+}
 #orderTable, #wishTable{
   width: 900px;
   border-collapse: collapse;
   margin-bottom: 150px;
   text-align: center;
+}
+#wishTable{
+  border-bottom: 2px solid black;
 }
 th{
   border-bottom: 1px solid lightgray;
@@ -157,7 +165,7 @@ th{
   color: rgb(183, 183, 183);
 }
 .wishItemsTd{
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px solid black;
   height: 270px;
   width: 180px;
   cursor: pointer;
@@ -167,7 +175,7 @@ th{
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .emptywishItemsTd{
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px solid black;
   height: 300px;
   width: 180px;
 }

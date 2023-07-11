@@ -14,7 +14,7 @@
 #subTitleDiv > h1{
   font-size: 40px;
 }
-#orderTitle, #delInfoTitle{
+#orderTitle, #delInfoTitle, #payDiv > span{
   display: block;
   font-weight: bold;
   margin-top: 30px;
@@ -30,7 +30,7 @@
   margin-top: -25px;
   margin-right: 100px;
 }
-#orderTable, #delInfoTable{
+#orderTable, #delInfoTable, #payDiv > table{
   width: 1100px;
   text-align: center;
   border-collapse: collapse;
@@ -104,13 +104,13 @@
 }
 #delInfoDiv{
   width: 1300px;
-  height: 500px;
+  height: 480px;
 }
 #delInfoTitle{
   margin-left: 100px;
   margin-top: 100px;
 }
-#delInfoTable{
+#delInfoTable, #payDiv > table{
   border-top: 2px solid black;
   width: 1100px;
   margin-left: 100px;
@@ -120,8 +120,8 @@
   height: 50px;
   width: 120px;
   font-size: 14px;
-  text-align: left;
-  padding-left: 20px;
+  text-align: center;
+  
   font-weight: bold;
   color: rgb(72, 72, 72);
 }
@@ -129,9 +129,11 @@
   border-bottom: 1px solid black;
 }
 .delInfoName{
-  width: 180px;
+  width: 170px;
 }
 .delInfoTd{
+  border-left: 1px solid black;
+  padding-left: 20px;
   height: 50px;
   text-align: left;
   color: rgb(72, 72, 72);
@@ -143,7 +145,29 @@
   font-size: 16px;
   font-weight: bold;
 }
-
+#payDiv{
+  width: 1300px;
+  height: 400px;
+}
+#payDiv > table{
+  border-bottom: 2px solid black;
+}
+.payTh{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  height: 50px;
+  width: 170px;
+  font-size: 14px;
+}
+.payTd{
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding-left: 20px;
+}
+#radioTd{
+  text-align: left;
+  padding-left: 15px;
+}
 #btnDiv{
   width: 1300px;
   height: 100px;

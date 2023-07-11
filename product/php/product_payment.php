@@ -19,7 +19,7 @@
           <h1>Order</h1>
       </div>
       <span id="orderTitle">주문내역</span>
-      <span id="orderSubMent">상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</span>
+      <span id="orderSubMent">* 상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</span>
       <table id="orderTable">
         <tr>
           <th class="orderTh">이미지</th>
@@ -93,7 +93,7 @@
       
       <div id="delInfoDiv">
         <span id="delInfoTitle">배송 정보</span>
-        <table id="delInfoTable" border="0">
+        <table id="delInfoTable">
           <tr>
             <td class="delInfoName">받으시는 분</td>
             <td class="delInfoTd"><?=$name ?></td>
@@ -116,6 +116,40 @@
             <td class="delInfoName">배송메시지</td>
             <td class="delInfoTd">
               <textarea name="delTextArea" id="delTextArea" cols="50" rows="5" placeholder="ex)부재 시 문 앞에 놓아주세요."></textarea>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="payDiv">
+        <span>결제 정보</span>
+        <table>
+          <tr>
+            <th class="payTh">총 상품가격</th>
+            <td class="payTd">\<?php echo number_format($pricePlus); ?></td>
+          </tr>
+          <tr>
+            <th class="payTh">배송비</th>
+            <td class="payTd">\<?php echo number_format($delPlus); ?></td>
+          </tr>
+          <tr>
+            <th class="payTh">사용 포인트</th>
+            <td class="payTd">
+              <input type="text">
+            </td>
+          </tr>
+          <tr>
+            <th class="payTh">총 결제금액</th>
+            <td class="payTd">0원</td>
+          </tr>
+          <tr>
+            <th class="payTh">결제방법</th>
+            <td id="radioTd">
+              <input type="radio" checked> 계좌이체
+              <input type="radio"> 신용/체크카드
+              <input type="radio"> 법인카드
+              <input type="radio"> 휴대폰결제
+              <input type="radio"> 무통장입금(가상계좌)
             </td>
           </tr>
         </table>

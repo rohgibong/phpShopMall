@@ -32,7 +32,7 @@
             <th>수량</th>
             <th>품절여부</th>
             <th>등록일</th>
-            <th>삭제</th>
+            <th>품절</th>
           </tr>
           <?php
             while($count < $num):
