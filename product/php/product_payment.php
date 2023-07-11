@@ -151,11 +151,11 @@
           <tr>
             <th class="payTh">결제 방법</th>
             <td id="radioTd">
-              <input type="radio" checked> 계좌이체
-              <input type="radio"> 신용/체크카드
-              <input type="radio"> 법인카드
-              <input type="radio"> 휴대폰결제
-              <input type="radio"> 무통장입금(가상계좌)
+              <input type="radio" name="payMethod" value="account" checked> 계좌이체
+              <input type="radio" name="payMethod" value="card"> 신용/체크카드
+              <input type="radio" name="payMethod" value="business"> 법인카드
+              <input type="radio" name="payMethod" value="phone"> 휴대폰결제
+              <input type="radio" name="payMethod" value="noAccount"> 무통장입금(가상계좌)
             </td>
           </tr>
         </table>
