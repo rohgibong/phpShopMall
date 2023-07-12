@@ -30,7 +30,21 @@
             <th class="tableThStyle">주문자</th>
             <td><?=$name ?></td>
             <th class="tableThStyle">결제상태</th>
-            <td>결제완료</td>
+            <td>
+              결제완료
+              :
+                <?php if($payMethod == "account"): ?>
+                  계좌이체
+                <?php elseif($payMethod == "card"): ?>
+                  신용/체크카드
+                <?php elseif($payMethod == "business"): ?>
+                  법인카드
+                <?php elseif($payMethod == "phone"): ?>
+                  휴대폰결제
+                <?php elseif($payMethod == "noAccount"): ?>
+                  무통장입금(가상계좌)
+                <?php endif; ?>
+            </td>
           </tr>
         </table>
 
@@ -53,15 +67,6 @@
         </table>
 
         <span>주문상품정보</span>
-        <!-- <?=$orderDate ?><br>
-        배송시작 : <?=$calStartDelDate ?><br>
-        배송중 : <?=$calIngDelDate ?><br>
-        도착일 : <?=$delDate ?><br>
-        <?=$currentDate ?> -->
-
-        <!-- <?=$productName ?>
-        <?=$delDate ?>
-        <?=$currentDate ?> -->
         <table class="orderTable">
           <tr>
             <th colspan="2" class="tableThStyle2">주문상품정보</th>
@@ -69,6 +74,8 @@
             <th class="tableThStyle2">가격</th>
             <th class="tableThStyle2">배송비</th>
             <th class="tableThStyle2">적립</th>
+            <th class="tableThStyle2">사용 포인트</th>
+            <th class="tableThStyle2">총 결제금액</th>
             <th class="tableThStyle">처리상태</th>
           </tr>
           <tr>
@@ -89,6 +96,12 @@
             </td>
             <td>
               <?php echo number_format($totalPrice/100); ?>P
+            </td>
+            <td>
+              <?php echo number_format($usedPoint); ?>P
+            </td>
+            <td>
+              \<?php echo number_format($totalPrice + $delPrice - $usedPoint); ?>
             </td>
             <td>
               <?php if($delDate <= $currentDate): ?>

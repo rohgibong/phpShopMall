@@ -25,7 +25,7 @@
 </script>
 <?php
   $con = mysqli_connect("localhost", "user1", "12345", "phpfinalproject");
-  $sql = "select p.*, o.amount, o.orderPrice, o.delMessage, o.orderDate, o.delDate from storeproduct p join storeorder o on p.productCode = o.productCode where memberNo = $memberNo and orderNo = $orderNo";
+  $sql = "select p.*, o.amount, o.orderPrice, o.usedPoint, o.delMessage, o.payMethod, o.orderDate, o.delDate from storeproduct p join storeorder o on p.productCode = o.productCode where memberNo = $memberNo and orderNo = $orderNo";
   $result = mysqli_query($con, $sql);
   $row_cnt = mysqli_num_rows($result);
   if($row_cnt != 0){
@@ -40,7 +40,9 @@
       $titleImg = $row['titleImg'];
       $amount = $row['amount'];
       $orderPrice = $row['orderPrice'];
+      $usedPoint = $row['usedPoint'];
       $delMessage = $row['delMessage'];
+      $payMethod = $row['payMethod'];
       $orderDate = $row['orderDate'];
       $delDate = $row['delDate'];
       $totalPrice = $productPrice * $amount;

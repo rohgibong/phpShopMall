@@ -171,6 +171,8 @@
   width: 80px;
   border: none;
   outline: none;
+  font-size: 15px;
+  font-weight: bold;
   border-bottom: 1px solid gray;
 }
 #pointBtn{
@@ -186,6 +188,7 @@
 #myPointId{
   font-size: 12px;
   font-weight: bold;
+  margin-left: 5px;
 }
 #radioTd{
   text-align: left;

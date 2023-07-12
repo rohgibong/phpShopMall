@@ -7,12 +7,13 @@
   $con = mysqli_connect("localhost", "user1", "12345", "phpfinalproject");
 
   //주문번호에 맞는 상품코드와 수량, 주문가격 뽑아오기
-  $sql = "select productCode, amount, orderPrice from storeorder where orderNo = $orderNo";
+  $sql = "select productCode, amount, orderPrice, usedPoint from storeorder where orderNo = $orderNo";
   $result = mysqli_query($con, $sql);
   while($row = mysqli_fetch_assoc($result)) {
     $productCode = $row['productCode'];
     $amount = $row['amount'];
     $orderPrice = $row['orderPrice'];
+    $usedPoint = $row['usedPoint'];
   }
 
   //돌려줘야할 포인트 계산
@@ -35,7 +36,7 @@
   }
 
   $updateStock = $stock + $amount;
-  $point = $point - $minusPoint;
+  $point = $point + $usedPoint - $minusPoint;
 
   if($soldOut = "O"){
     $soldOut = "X";

@@ -61,7 +61,6 @@
                 if($num > 5){
                   $num = 5;
                 }
-              $orderPrice = $product[$count]['orderPrice'] + $product[$count]['delPrice']
             ?>
             <tr>
               <td id="orderTableFirst" class="tdClass">
@@ -71,7 +70,7 @@
                 <?=$product[$count]['productName'] ?>
               </td>
               <td class="tdClass">
-                \<?php echo number_format($orderPrice); ?>
+                \<?php echo number_format($product[$count]['orderPrice']); ?>
               </td>
               <td class="tdClass">
                 <button type="button" id="viewBtn" onClick="viewDetail('<?=$product[$count]['orderNo'] ?>');">VIEW</button>

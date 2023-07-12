@@ -1,3 +1,5 @@
+
+
 <?php
   session_start();
   date_default_timezone_set("Asia/Seoul");
@@ -5,11 +7,16 @@
   $productCodes = isset($_POST["productCodes"]) ? $_POST["productCodes"] : 0;
   $amounts = isset($_POST["amounts"]) ? $_POST["amounts"] : 0;
   $delMessage = isset($_POST["delMessage"]) ? $_POST["delMessage"] : "";
+  $pointValue = isset($_POST["pointValue"]) ? $_POST["pointValue"] : 0;
+  $payMethod = isset($_POST["payMethod"]) ? $_POST["payMethod"] : 0;
   $orderDate = date("Y-m-d H:i:s");
   $soldOut = "X";
   $boughtPrice = 0;
+  $plusPoint = 0;
+  $usedPoint = 0;
   $con = mysqli_connect("localhost", "user1", "12345", "phpfinalproject");
 ?>
+
 <script>
   const memberNo = <?php echo $memberNo ?>;
   const productCodes = <?php echo json_encode($productCodes)?>;
@@ -18,35 +25,47 @@
     location.href='../../../home/php/index.php';
   }
 </script>
+
 <?php
-  $sql = "select point, level from storemember where memberNo = $memberNo";
+  $sql = "select level from storemember where memberNo = $memberNo";
   $result = mysqli_query($con, $sql);
   while($row = mysqli_fetch_assoc($result)) {
-    $userPoint = $row['point'];
     $userLevel = $row['level'];
   }
 
-
   for ($i = 0; $i < count($productCodes); $i++) {
     //1.(storeproduct 테이블에서 가격, 재고 뽑아오기, 포인트 계산, 남은재고계산)
-    $sql = "select productPrice, stock, delPeriod from storeproduct where productCode = ".$productCodes[$i];
+    $sql = "select productPrice, stock, delPeriod, delPrice from storeproduct where productCode = ".$productCodes[$i];
     $result2 = mysqli_query($con, $sql);
     while($row = mysqli_fetch_assoc($result2)) {
       $productPrice = $row['productPrice'];
       $stock = $row['stock'];
       $delPeriod = $row['delPeriod'];
+      $delPrice = $row['delPrice'];
     }
     $calOrderDate = new DateTime($orderDate); 
     $deliveryPeriod = new DateInterval('P'.$delPeriod.'D');
     $calOrderDate->add($deliveryPeriod);
     $expectedDeliveryDate = $calOrderDate->format('Y-m-d H:i:s');
 
-    $userPoint = $userPoint + (($productPrice / 100) * $amounts[$i]);
+    $plusPoint = $plusPoint + (($productPrice / 100) * $amounts[$i]);
     $stock = $stock - $amounts[$i];
-    $orderPrice = $productPrice * $amounts[$i];
+    $orderPrice = ($productPrice * $amounts[$i]) + $delPrice;
+
+    if($pointValue != 0){
+      if($orderPrice >= $pointValue){
+        $orderPrice = $orderPrice - $pointValue;
+        $usedPoint = $pointValue;
+        $pointValue = 0;
+      } else {
+        $orderPrice = 0;
+        $usedPoint = $orderPrice;
+        $pointValue = $pointValue - $orderPrice;
+      }
+    }
 
     //2.(storeorder테이블에 담아온거 저장)
-    $sql = "insert into storeorder(memberNo, productCode, amount, orderPrice, delMessage, orderDate, delDate) values ($memberNo, ".$productCodes[$i].", ".$amounts[$i].", $orderPrice, '$delMessage', '$orderDate', '$expectedDeliveryDate')";
+    $sql = "insert into storeorder(memberNo, productCode, amount, orderPrice, usedPoint, delMessage, payMethod, orderDate, delDate) values ($memberNo, ".$productCodes[$i].", ".$amounts[$i].", $orderPrice, $usedPoint, '$delMessage', '$payMethod', '$orderDate', '$expectedDeliveryDate')";
     mysqli_query($con, $sql);
 
     //3.(재고 업데이트)
@@ -67,10 +86,12 @@
       $sql = "delete from storecart where memberNo = $memberNo and productCode = ".$productCodes[$i]." and amount = ".$amounts[$i];
       mysqli_query($con, $sql);
     }
+    $usedPoint = 0;
   }
 
   //5.(포인트계산)
-  $sql = "update storemember set point = $userPoint where memberNo = $memberNo";
+  $remainedPoint = $pointValue + $plusPoint;
+  $sql = "update storemember set point = $remainedPoint where memberNo = $memberNo";
   mysqli_query($con, $sql);
 
   //6.(레벨계산)

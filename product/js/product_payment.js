@@ -1,4 +1,6 @@
 let pointInput = document.getElementById("pointInput");
+let userPoint = +point;
+let getPoint = +pointInput.value;
 
 function orderItem() {
   let selectedItems1 = [];
@@ -7,6 +9,7 @@ function orderItem() {
   let productCodeInputs = document.querySelectorAll('input[name="productCodes[]"]');
   let amountInputs = document.querySelectorAll('input[name="amounts[]"]');
   let delMessage = document.getElementById('delTextArea').value;
+  let pointInputValue = document.getElementById('pointInput').value;
 
   productCodeInputs.forEach(function(input) {
     selectedItems1.push(input.value);
@@ -42,6 +45,21 @@ function orderItem() {
   delMessageInput.value = delMessage;
   form.appendChild(delMessageInput);
 
+  let pointInput = document.createElement('input');
+  pointInput.type = 'hidden';
+  pointInput.name = 'pointValue';
+  pointInput.value = pointInputValue;
+  form.appendChild(pointInput);
+
+  let selectedPayMethod = document.querySelector('input[name="payMethod"]:checked');
+  if (selectedPayMethod) {
+    let payMethodInput = document.createElement('input');
+    payMethodInput.type = 'hidden';
+    payMethodInput.name = 'payMethod';
+    payMethodInput.value = selectedPayMethod.value;
+    form.appendChild(payMethodInput);
+  }
+
   document.body.appendChild(form);
   form.submit();
 }
@@ -57,9 +75,9 @@ function checkInput(event){
 }
 
 function inputPoint(){
-  let userPoint = +point;
-
-  if(userPoint > calTotalPrice){
+  if(userPoint < 1000){
+    alert('포인트는 최소 1000P부터 사용 가능합니다.');
+  } else if(userPoint > calTotalPrice){
     pointInput.value = calTotalPrice;
   } else {
     pointInput.value = point;
@@ -67,8 +85,6 @@ function inputPoint(){
 }
 
 function checkPoint(){
-  let userPoint = +point;
-  let getPoint = +pointInput.value;
   if(userPoint < getPoint){
     alert('보유 포인트보다 많은 포인트를 입력하셨습니다.\n최대 '+userPoint+'P 까지 사용가능합니다.');
     pointInput.value = point;

@@ -9,6 +9,19 @@
   $pricePlus = 0;
   $delPlus = 0;
 
+?>
+<script>
+  const checkProduct = <?php echo json_encode($checkProduct)?>;
+  const productCode = <?php echo $productCode ?>;
+
+  if(memberNo <= 0 || (checkProduct == 0 && productCode == 0)){
+    alert('잘못된 접근입니다.');
+    location.href='../../home/php/index.php';
+  }
+
+</script>
+<?php
+
   if ($checkProduct != 0) {
     foreach ($checkProduct as $arrProductCode) {
       $sql = "select p.*, c.amount from storeproduct p join storecart c on p.productCode = c.productCode where c.memberNo = $memberNo and c.productCode = $arrProductCode";
@@ -63,11 +76,5 @@
   mysqli_close($con);
 ?>
 <script>
-  const checkProduct = <?php echo json_encode($checkProduct)?>;
-  const productCode = <?php echo $productCode ?>;
   const point = <?php echo $point ?>;
-  if(memberNo <= 0 || (checkProduct == 0 && productCode == 0)){
-    alert('잘못된 접근입니다.');
-    location.href='../../home/php/index.php';
-  }
 </script>
